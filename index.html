@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="gb2312">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/xingzuo.css"/>
+</head>
+
+<body>
+<img class="logo" width="270" src="baidu/logo_white.png" alt="">
+<p class="links">
+    <a href="http://news.baidu.com" target="_blank">新闻</a>
+    <a href="http://www.baidu.com" target="_blank">网页</a>
+    <a href="http://tieba.baidu.com" target="_blank">贴吧</a>
+    <a href="http://zhidao.baidu.com" target="_blank">知道</a>
+    <a href="http://music.baidu.com" target="_blank">音乐</a>
+    <a href="http://image.baidu.com" target="_blank">图片</a>
+    <a href="http://v.baidu.com" target="_blank">视频</a>
+    <a href="http://map.baidu.com" target="_blank">地图</a>
+    <a href="http://baike.baidu.com" target="_blank">百科</a>
+    <a href="http://wenku.baidu.com" target="_blank">文库</a>
+    <a href="http://www.baidu.com/more/" target="_blank">更多&gt;&gt;</a>
+</p>
+<div class="search">
+    <input id=txtSearch type="text"><button id="btnSearch">百度一下</button>
+</div>
+<div class="container">
+    <div class="menu">
+        <span>导航</span>
+        <span>音乐</span>
+        <span>新闻</span>
+        <span class="choose">星座</span>
+    </div>
+    <div class="card">
+        <div class="xingzuo">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src='js/jquery-1.11.3.js'></script>
+<script src='js/template.js'></script>
+<script src='js/itcast.js'></script>
+<script src='js/xingzuo.js'></script>
+<script>
+
+var btnSearch=document.getElementById('btnSearch');
+
+	btnSearch.onclick=function(){
+		var txt=document.getElementById('txtSearch').value;
+		console.log(txt);
+		var urll = encodeURI('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&tn=baiduhome_pg&wd='+txt+'&rsv_spt=1&rsv_pq=b3b4b3d0000674b0&rsv_t=e7cdJydf7TdofKdCGEwlZFn7ySYowyKeFsRRXF69bgbfCqmh3IZyb5SLrEkJTC1YwKg5&rqlang=cn&rsv_enter=1&rsv_sug3=1&rsv_sug2=0&inputT=5383&rsv_sug4=5383')
+		window.open(urll);
+	}
+
+</script>
